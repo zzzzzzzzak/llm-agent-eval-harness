@@ -1,0 +1,105 @@
+{
+  "generated_at_utc": "2026-11-18 08:02:26 UTC",
+  "dataset_fingerprint_sha256": "fda65077f0588ca4",
+  "total_tasks": 60,
+  "baseline": {
+    "adapter_name": "baseline_v1",
+    "task_count": 60,
+    "overall_score": {
+      "mean": 0.8668,
+      "ci_low": 0.7879,
+      "ci_high": 0.9357
+    },
+    "overall_pass_rate": {
+      "mean": 0.8,
+      "ci_low": 0.7,
+      "ci_high": 0.9
+    },
+    "operational_metrics": {
+      "p50_latency_ms": 471.25,
+      "p95_latency_ms": 680.5,
+      "p99_latency_ms": 704.03,
+      "mean_tokens": 96.7,
+      "total_tokens": 5801
+    },
+    "category_breakdown": {
+      "code_synthesis": {
+        "count": 15,
+        "mean_score": 0.8667,
+        "pass_rate": 0.8667
+      },
+      "grounded_qa": {
+        "count": 15,
+        "mean_score": 0.8183,
+        "pass_rate": 0.6
+      },
+      "structured_json": {
+        "count": 15,
+        "mean_score": 0.8667,
+        "pass_rate": 0.8667
+      },
+      "tool_trajectory": {
+        "count": 15,
+        "mean_score": 0.9156,
+        "pass_rate": 0.8667
+      }
+    }
+  },
+  "candidate": {
+    "adapter_name": "candidate_v2",
+    "task_count": 60,
+    "overall_score": {
+      "mean": 0.9728,
+      "ci_low": 0.9394,
+      "ci_high": 1.0
+    },
+    "overall_pass_rate": {
+      "mean": 0.95,
+      "ci_low": 0.8833,
+      "ci_high": 1.0
+    },
+    "operational_metrics": {
+      "p50_latency_ms": 401.5,
+      "p95_latency_ms": 578.2,
+      "p99_latency_ms": 598.07,
+      "mean_tokens": 97.1,
+      "total_tokens": 5828
+    },
+    "category_breakdown": {
+      "code_synthesis": {
+        "count": 15,
+        "mean_score": 1.0,
+        "pass_rate": 1.0
+      },
+      "grounded_qa": {
+        "count": 15,
+        "mean_score": 0.9333,
+        "pass_rate": 0.8667
+      },
+      "structured_json": {
+        "count": 15,
+        "mean_score": 1.0,
+        "pass_rate": 1.0
+      },
+      "tool_trajectory": {
+        "count": 15,
+        "mean_score": 0.9578,
+        "pass_rate": 0.9333
+      }
+    }
+  },
+  "comparison_and_gate": {
+    "gate_passed": true,
+    "failures": [],
+    "paired_permutation_test": {
+      "mean_delta": 0.106,
+      "p_value": 0.002599
+    },
+    "mcnemar_test": {
+      "regressions_b": 0,
+      "improvements_c": 9,
+      "method": "exact_binomial",
+      "p_value": 0.003906
+    }
+  }
+}

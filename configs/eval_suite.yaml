@@ -1,0 +1,20 @@
+suite:
+  name: frontier-agent-regression-suite
+  version: 1.0.0
+
+dataset:
+  path: datasets/agent_eval_suite.jsonl
+
+execution:
+  code_timeout_sec: 3.0
+
+regression_gate:
+  min_overall_score: 0.78
+  max_score_regression: 0.02
+  significance_alpha: 0.05
+  max_p95_latency_ms: 1200.0
+  min_category_scores:
+    code_synthesis: 0.75
+    tool_trajectory: 0.80
+    grounded_qa: 0.80
+    structured_json: 0.85
